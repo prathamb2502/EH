@@ -1,0 +1,8 @@
+1. Pull Image from repo https://hub.docker.com/r/nigga4059/dc4-qemu using command docker pull nigga4059/dc4-qemu
+2. docker run -it --privileged -p 80:80 --name dc4_container dc4-qemu
+wait for some time .....
+you will get some message in terminal 
+3. Try to get ip of continaer using the command docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' dc4_container. RUn this in differnt terminal.
+4. You will get a ip 
+5. When you go to that ip, you will get login form.
+6. Use Burpsuite to do brute force . For more details follow this page https://c15c01337.medium.com/dc-4-vulnerable-machine-walkthrough-12e1dd63a11e
